@@ -1,0 +1,44 @@
+<html>
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+  <link rel="stylesheet" href="preview_static/css/style.css">
+  <script type="text/javascript" src="https://testpay.kcp.co.kr/plugin/payplus_web.jsp"></script>
+
+  <script type="text/javascript">
+
+    function jsf__pay( form )
+    {
+      try
+      {
+        KCP_Pay_Execute( form );
+      }
+      catch (e)
+      {
+      }
+    }
+
+  </script>
+</head>
+
+<body onload="jsf__pay( document.order_info )">
+
+<form name="order_info">
+  <input type="hidden" name="ordr_idxx" value="TEST1234567890"/>
+  <input type="hidden" name="good_name" value="TestGoods"/>
+  <input type="hidden" name="good_mny" value="1004"/>
+  <input type="hidden" name="pay_method" value="100000000000"/>
+  <input type="hidden" name="site_cd" value="T0000"/>
+  <input type="hidden" name="site_key" value="3grptw1.zW0GSo4PQdaGvsF__"/>
+
+  <!-- bottom -->
+  <div id="bottom">
+    <div class="inner">
+      <div class="btn-wrap" style="text-align:center;">
+        <a onclick="location.href='./integration_web'" class="btn-type-1">돌아가기</a><br>
+      </div>
+    </div>
+  </div>
+</form>
+
+</body>
+</html>
